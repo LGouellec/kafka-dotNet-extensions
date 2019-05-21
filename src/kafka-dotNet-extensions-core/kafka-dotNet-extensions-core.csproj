@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>kafka_dotNet_extensions_core</RootNamespace>
+  </PropertyGroup>
+
+  <Import Project="..\kafka-dotNet-extensions-core-shared\kafka-dotNet-extensions-core-shared.projitems" Label="Shared" />
+
+</Project>
