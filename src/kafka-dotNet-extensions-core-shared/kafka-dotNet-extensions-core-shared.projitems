@@ -10,18 +10,21 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Attributes\KafkaConfigurationAttribute.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Configuration\BuilderExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Configuration\Impl\ConsumerBuilder.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Configuration\Impl\AbstractBuilder.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Configuration\Impl\ProducerBuilder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Configuration\Options\KafkaOptions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Configuration\Properties\BaseProperties.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Configuration\Properties\ConsumerProperties.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Configuration\Properties\GeneralProperties.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Configuration\IBuilder.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Configuration\Properties\ProducerProperties.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Configuration\Properties\TopicProperties.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Serializer\JsonObjectDeserializer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Serializer\JsonObjectSerializer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Configuration\Impl\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Configuration\Options\" />
   </ItemGroup>
 </Project>

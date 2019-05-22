@@ -1,10 +1,19 @@
 ﻿using kafka_dotNet_extensions_core;
 using kafka_dotNet_extensions_core.Configuration;
+using kafka_dotNet_extensions_core.Serializer;
 using System;
 using System.Threading;
 
-namespace Sample_KafkaSimpleConsumer
+namespace Sample_KafkaJsonConsumer
 {
+    public class MyObject
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+
+        public override string ToString() => $"ID: {ID} | Name : {Name}";
+    }
+
     class Program
     {
         static void Main(string[] args)
@@ -16,11 +25,12 @@ namespace Sample_KafkaSimpleConsumer
             };
             var cancellationToken = cts.Token;
 
-            var builder = new ConsumerBuilder<Confluent.Kafka.Null, string>()
-                                    .UseSectionConfiguration("test")
+            var builder = new ConsumerBuilder<Confluent.Kafka.Null, MyObject>()
+                                    .UseSectionConfiguration("testjson")
                                     .UseOptions(opt =>
                                     {
                                         opt.ErrorHandler = ((_, e) => Console.WriteLine($"Error: {e.Reason}"));
+                                        opt.ValueDeserializer = new JsonObjectDeserializer<MyObject>();
                                     });
 
             using (var consumer = builder.Build())

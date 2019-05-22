@@ -1,4 +1,7 @@
-﻿namespace kafka_dotNet_extensions_core
+﻿using kafka_dotNet_extensions_core.Configuration;
+using System;
+
+namespace kafka_dotNet_extensions_core
 {
     /// <summary>
     /// 
@@ -67,5 +70,12 @@
         /// <param name="properties"></param>
         /// <returns></returns>
         IBuilder UseTopicProperties(TopicProperties properties);
+    }
+    
+    /// <summary>
+    /// 
+    /// </summary>
+    public interface IBuilder<TKey, TValue> : IBuilder
+    {
     }
 }

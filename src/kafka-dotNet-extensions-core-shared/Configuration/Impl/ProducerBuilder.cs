@@ -5,8 +5,15 @@ using System.Linq;
 
 namespace kafka_dotNet_extensions_core.Configuration
 {
-    public class ProducerBuilder<TKey, TValue> : AbstractBuilder
+    public class ProducerBuilder<TKey, TValue> : AbstractBuilder<TKey, TValue>
     {
+        private readonly ProducerOptions<TKey, TValue> _options = new ProducerOptions<TKey, TValue>();
+
+        public ProducerBuilder()
+        {
+
+        }
+
         public override IBuilder UseConsumerProperties(ConsumerProperties properties)
         {
             return this;
@@ -26,10 +33,35 @@ namespace kafka_dotNet_extensions_core.Configuration
 
             _configuration["bootstrap.servers"] = String.Join(", ", _brokerList.ToArray());
             var builder = new Confluent.Kafka.ProducerBuilder<TKey, TValue>(_configuration.Select(kp => new KeyValuePair<string, string>(kp.Key, kp.Value.ToString())).AsEnumerable());
-            // TODO : Seriazlier
+            SetHandlers(builder);
+
             producer = builder.Build();
 
             return producer;
+        }
+
+        public ProducerBuilder<TKey, TValue> UseOptions(Action<ProducerOptions<TKey, TValue>> action)
+        {
+            action(_options);
+            return this;
+        }
+
+        private void SetHandlers(Confluent.Kafka.ProducerBuilder<TKey, TValue> builder)
+        {
+            if (_options.ErrorHandler != null)
+                builder.SetErrorHandler(_options.ErrorHandler);
+
+            if (_options.KeySerializer != null)
+                builder.SetKeySerializer(_options.KeySerializer);
+
+            if (_options.ValueSerializer != null)
+                builder.SetValueSerializer(_options.ValueSerializer);
+
+            if (_options.LogHandler != null)
+                builder.SetLogHandler(_options.LogHandler);
+
+            if (_options.StatisticsHandler != null)
+                builder.SetStatisticsHandler(_options.StatisticsHandler);
         }
     }
 }

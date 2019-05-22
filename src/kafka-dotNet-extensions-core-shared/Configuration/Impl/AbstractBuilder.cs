@@ -5,7 +5,7 @@ using System.ComponentModel;
 
 namespace kafka_dotNet_extensions_core.Configuration
 {
-    public abstract class AbstractBuilder : IBuilder
+    public abstract class AbstractBuilder<TKey, TValue> : IBuilder<TKey, TValue>
     {
         protected readonly Dictionary<string, object> _configuration = new Dictionary<string, object>();
         protected readonly List<string> _brokerList = new List<string>();
