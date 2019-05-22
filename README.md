@@ -8,7 +8,7 @@ Some high level abstractions for working with Apache Kafka in .NET
     (https://dev.to/expecho/reporting-metrics-using-net-core-eventsource-and-eventcounter-23dn)
 - [X] Configuration ServiceModel
 - [X] Configuration Fluent Code
+- [X] Json Serializer + Deserializer
 - [ ] Configuration Yaml
 - [ ] Dead letters Broker (Memory Queue ou something else)
-- [ ] Some samples with different use cases
-- [X] Json Serializer + Deserializer
+- [ ] Some samples with different use cases : WIP
