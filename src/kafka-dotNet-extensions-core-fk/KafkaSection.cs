@@ -440,55 +440,55 @@ namespace kafka_dotNet_extensions_core
             set { this["saslMechanism"] = value; }
         }
 
-        /// <summary>
-        /// Kerberos principal name that Kafka runs as, not including /hostname@REALM 
-        /// </summary>
-        [ConfigurationProperty("saslKerberosServiceName", DefaultValue = "kafka")]
-        public string SASLKerberosServiceName
-        {
-            get { return (string)this["saslKerberosServiceName"]; }
-            set { this["saslKerberosServiceName"] = value; }
-        }
+        ///// <summary>
+        ///// Kerberos principal name that Kafka runs as, not including /hostname@REALM 
+        ///// </summary>
+        //[ConfigurationProperty("saslKerberosServiceName", DefaultValue = "kafka")]
+        //public string SASLKerberosServiceName
+        //{
+        //    get { return (string)this["saslKerberosServiceName"]; }
+        //    set { this["saslKerberosServiceName"] = value; }
+        //}
 
-        /// <summary>
-        /// This client"s Kerberos principal name. (Not supported on Windows, will use the logon user"s principal).
-        /// </summary>
-        [ConfigurationProperty("saslKerberosPrincipal", DefaultValue = "kafkaclient")]
-        public string SASLKerberosPrincipal
-        {
-            get { return (string)this["saslKerberosPrincipal"]; }
-            set { this["saslKerberosPrincipal"] = value; }
-        }
+        ///// <summary>
+        ///// This client"s Kerberos principal name. (Not supported on Windows, will use the logon user"s principal).
+        ///// </summary>
+        //[ConfigurationProperty("saslKerberosPrincipal", DefaultValue = "kafkaclient")]
+        //public string SASLKerberosPrincipal
+        //{
+        //    get { return (string)this["saslKerberosPrincipal"]; }
+        //    set { this["saslKerberosPrincipal"] = value; }
+        //}
 
-        /// <summary>
-        /// Full kerberos kinit command string, %{config.prop.name} is replaced by corresponding config object value, %{broker.name} returns the broker"s hostname. 
-        /// </summary>
-        [ConfigurationProperty("saslKerberosKinitCmd", DefaultValue = "kinit -S %{sasl.kerberos.service.name}/%{broker.name} -k -t %{sasl.kerberos.keytab} %{sasl.kerberos.principal}")]
-        public string SASLKerberosKinitCmd
-        {
-            get { return (string)this["saslKerberosKinitCmd"]; }
-            set { this["saslKerberosKinitCmd"] = value; }
-        }
+        ///// <summary>
+        ///// Full kerberos kinit command string, %{config.prop.name} is replaced by corresponding config object value, %{broker.name} returns the broker"s hostname. 
+        ///// </summary>
+        //[ConfigurationProperty("saslKerberosKinitCmd", DefaultValue = null)]
+        //public string SASLKerberosKinitCmd
+        //{
+        //    get { return (string)this["saslKerberosKinitCmd"]; }
+        //    set { this["saslKerberosKinitCmd"] = value; }
+        //}
 
-        /// <summary>
-        /// Path to Kerberos keytab file. Uses system default if not set.NOTE: This is not automatically used but must be added to the template in sasl.kerberos.kinit.cmd as ... -t %{sasl.kerberos.keytab}. 
-        /// </summary>
-        [ConfigurationProperty("saslKerberosKeytab", DefaultValue = null)]
-        public string SASLKerberosKeytab
-        {
-            get { return (string)this["saslKerberosKeytab"]; }
-            set { this["saslKerberosKeytab"] = value; }
-        }
+        ///// <summary>
+        ///// Path to Kerberos keytab file. Uses system default if not set.NOTE: This is not automatically used but must be added to the template in sasl.kerberos.kinit.cmd as ... -t %{sasl.kerberos.keytab}. 
+        ///// </summary>
+        //[ConfigurationProperty("saslKerberosKeytab", DefaultValue = null)]
+        //public string SASLKerberosKeytab
+        //{
+        //    get { return (string)this["saslKerberosKeytab"]; }
+        //    set { this["saslKerberosKeytab"] = value; }
+        //}
 
-        /// <summary>
-        /// Minimum time in milliseconds between key refresh attempts. 
-        /// </summary>
-        [ConfigurationProperty("saslKerberosMinTimeBeforeRelogin", DefaultValue = 60000)]
-        public int SASLKerberosMinTimeBeforeRelogin
-        {
-            get { return (int)this["saslKerberosMinTimeBeforeRelogin"]; }
-            set { this["saslKerberosMinTimeBeforeRelogin"] = value; }
-        }
+        ///// <summary>
+        ///// Minimum time in milliseconds between key refresh attempts. 
+        ///// </summary>
+        //[ConfigurationProperty("saslKerberosMinTimeBeforeRelogin", DefaultValue = 60000)]
+        //public int SASLKerberosMinTimeBeforeRelogin
+        //{
+        //    get { return (int)this["saslKerberosMinTimeBeforeRelogin"]; }
+        //    set { this["saslKerberosMinTimeBeforeRelogin"] = value; }
+        //}
 
         /// <summary>
         /// SASL username for use with the PLAIN and SASL-SCRAM-.. mechanisms 
