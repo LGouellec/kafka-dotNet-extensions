@@ -1,6 +1,9 @@
 # kafka-dotNet-extensions
 Some high level abstractions for working with Apache Kafka in .NET
 
+[![Build status](https://ci.appveyor.com/api/projects/status/t19o59ban5gif9s8?svg=true)](https://ci.appveyor.com/project/LGouellec/kafka-dotnet-extensions)
+
+
 # TODO List
 - [ ] Performances Counter (.NET Framework < 4.7) (https://github.com/edenhill/librdkafka/blob/master/STATISTICS.md)
 - [ ] Event Counters (.NET Framework >= 4.7 | .NET Core) (https://github.com/edenhill/librdkafka/blob/master/STATISTICS.md)
