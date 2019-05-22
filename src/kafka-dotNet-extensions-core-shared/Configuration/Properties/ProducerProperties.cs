@@ -73,12 +73,5 @@ namespace kafka_dotNet_extensions_core
         [KafkaConfiguration(KafkaPropertyName = "batch.num.messages")]
         [DefaultValue(10000)]
         public int BatchNumMessages { get; set; }
-
-        /// <summary>
-        /// Only provide delivery reports for failed messages.
-        /// </summary>
-        [KafkaConfiguration(KafkaPropertyName = "delivery.report.only.error")]
-        [DefaultValue(false)]
-        public bool DeliveryReportOnlyError { get; set; }
     }
 }

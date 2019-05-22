@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Les informations générales relatives à un assembly dépendent de
 // l'ensemble d'attributs suivant. Changez les valeurs de ces attributs pour modifier les informations
 // associées à un assembly.
-[assembly: AssemblyTitle("Sample-KafkaSectionConfiguration")]
+[assembly: AssemblyTitle("Sample-KafkaSimpleConsumer")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("Sample-KafkaSectionConfiguration")]
+[assembly: AssemblyProduct("Sample-KafkaSimpleConsumer")]
 [assembly: AssemblyCopyright("Copyright © Microsoft 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Le GUID suivant est pour l'ID de la typelib si ce projet est exposé à COM
-[assembly: Guid("3aac96e7-8bf5-4f15-805c-50b2fee82dcc")]
+[assembly: Guid("3a9e6858-e8e8-4ec8-96c9-94fd4782d3b0")]
 
 // Les informations de version pour un assembly se composent des quatre valeurs suivantes :
 //

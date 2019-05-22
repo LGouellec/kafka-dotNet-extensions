@@ -118,8 +118,7 @@ namespace kafka_dotNet_extensions_core
                         RetryBackoffMs = section.RetryBackoffMs,
                         QueueBufferingBackPressureThreshold = section.QueueBufferingBackPressureThreshold,
                         CompressionCodec = section.CompressionCodec,
-                        BatchNumMessages = section.BatchNumMessages,
-                        DeliveryReportOnlyError = section.DeliveryReportOnlyError
+                        BatchNumMessages = section.BatchNumMessages
                     })
                     .UseTopicProperties(new TopicProperties
                     {

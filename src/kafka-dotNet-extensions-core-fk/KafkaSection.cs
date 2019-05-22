@@ -819,16 +819,6 @@ namespace kafka_dotNet_extensions_core
             set { this["batchNumMessages"] = value; }
         }
 
-        /// <summary>
-        /// Only provide delivery reports for failed messages.
-        /// </summary>
-        [ConfigurationProperty("deliveryReportOnlyError", DefaultValue = false)]
-        public bool DeliveryReportOnlyError
-        {
-            get { return (bool)this["deliveryReportOnlyError"]; }
-            set { this["deliveryReportOnlyError"] = value; }
-        }
-
         #endregion
 
         #region Topic Properties

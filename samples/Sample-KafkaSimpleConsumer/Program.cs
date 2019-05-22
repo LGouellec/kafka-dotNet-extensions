@@ -3,7 +3,7 @@ using kafka_dotNet_extensions_core.Configuration;
 using System;
 using System.Threading;
 
-namespace Sample_KafkaSectionConfiguration
+namespace Sample_KafkaSimpleConsumer
 {
     class Program
     {
@@ -17,7 +17,7 @@ namespace Sample_KafkaSectionConfiguration
             var cancellationToken = cts.Token;
 
             var builder = new ConsumerBuilder<Confluent.Kafka.Null, string>().UseSectionConfiguration("test");
-            using(var consumer = builder.Build())
+            using (var consumer = builder.Build())
             {
                 try
                 {
