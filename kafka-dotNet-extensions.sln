@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample-KafkaSimpleConsumer"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample-KafkaSimpleProducer", "samples\Sample-KafkaSimpleProducer\Sample-KafkaSimpleProducer.csproj", "{59166876-0C8F-493C-B851-54B9A03918FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample-KafkaJsonProducer", "Sample-KafkaJsonProducer\Sample-KafkaJsonProducer.csproj", "{9745D0C8-E7CA-4B6D-8CD8-A53FB4C7AC38}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample-KafkaJsonProducer", "samples\Sample-KafkaJsonProducer\Sample-KafkaJsonProducer.csproj", "{9745D0C8-E7CA-4B6D-8CD8-A53FB4C7AC38}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample-KafkaJsonConsumer", "samples\Sample-KafkaJsonConsumer\Sample-KafkaJsonConsumer.csproj", "{392A5A76-A2EE-4385-8E60-D26A6FEA03B4}"
 EndProject
