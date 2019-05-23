@@ -57,6 +57,12 @@ namespace kafka_dotNet_extensions_core.Configuration
             if (_options.ValueSerializer != null)
                 builder.SetValueSerializer(_options.ValueSerializer);
 
+            if (_options.KeyAsyncSerializer != null)
+                builder.SetKeySerializer(_options.KeyAsyncSerializer);
+
+            if (_options.ValueAsyncSerializer != null)
+                builder.SetValueSerializer(_options.ValueAsyncSerializer);
+
             if (_options.LogHandler != null)
                 builder.SetLogHandler(_options.LogHandler);
 
